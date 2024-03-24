@@ -1,5 +1,32 @@
 # mobile_worker
 
+Django version 5.0.3
+Python 3.10
+
+##create python environment
+```
+python3 -m venv env_name
+```
+activate python env
+
+install requirements
+```
+pip install requirements.txt
+```
+
+## create postgres db with these commands
+```
+sudo -u postgres psql
+postgres=# create database mydb;
+postgres=# create user myuser with encrypted password 'mypass';
+postgres=# grant all privileges on database mydb to myuser;
+```
+Now run these commands
+```
+python manage.py migrate
+python manage.py runserver
+```
+
 # .env Sample
 
 This is a sample .env file for configuring your Django project. The .env file is used to store environment variables that your Django project needs for configuration.
